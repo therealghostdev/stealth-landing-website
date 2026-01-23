@@ -56,7 +56,7 @@ const Footer = () => {
                 alt="logo"
               />
             </div>
-            <div className="lg:w-3/4 md:w-full max-sm:w-2/4 flex justify-between items-center">
+            <div className="lg:w-3/4 md:w-full max-sm:w-2/4 flex justify-between items-center flex-wrap gap-y-2">
               <Link
                 href="https://x.com/stealthmoney_"
                 target="_blank"
@@ -74,6 +74,15 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <Icons.LinkedInLogoIcon className="w-5 h-5 text-white" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/stealthmoney_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-[#FFFFFF33] flex items-center justify-center hover:bg-[#4a4a4a] transition-colors duration-300"
+                aria-label="LinkedIn"
+              >
+                <Icons.InstagramLogoIcon className="w-5 h-5 text-white" />
               </Link>
 
               <Link
