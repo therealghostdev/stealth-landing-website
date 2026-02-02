@@ -4,9 +4,11 @@ export default function AML_policy_page() {
       {/* Header Section */}
       <div className="bg-orange-100 text-black py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-Satoshi">AML Policy</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-Satoshi">
+            AML Policy
+          </h1>
           <p className="text-lg md:text-xl opacity-80">
-            Stealth Digital Solutions, Inc. - Anti-Money Laundering Policy
+            Stealthtech Solutions, Limited. - Anti-Money Laundering Policy
           </p>
         </div>
       </div>
@@ -18,11 +20,9 @@ export default function AML_policy_page() {
             Company Information
           </h2>
           <p className="text-white/90 text-base md:text-lg leading-relaxed">
-            Stealth Digital Solutions, Inc. (the &quot;Company&quot;,
+            SStealthtech Solutions, Limited. (the &quot;Company&quot;,
             &quot;We&quot;, &quot;Us&quot;, &quot;Our&quot;) a private limited
-            liability company incorporated in Delaware, US is the data
-            controller for personal information collected in connection with
-            provision of Stealth Money Services.
+            liability company incorporated in the federal Republic of Nigeria.
           </p>
         </div>
 
@@ -35,13 +35,13 @@ export default function AML_policy_page() {
             This policy is connected to a more comprehensive in-house Anti-Money
             Laundering (AML), Know Your Customer (KYC) and the combating the
             Financing of Terrorism Policy (CFT). It sets out an abbreviated
-            version of the guidelines for Stealth Digital Solution Inc. (herein
-            referred to as &apos;the Company&apos;) compliance with AML/CFT
-            obligations under the law, as well as regulatory directives. It
-            prevents any transaction that facilitates criminal activities.
+            version of the guidelines for Stealthtech Solutions, Limited.
+            (herein referred to as &apos;the Company&apos;) compliance with
+            AML/CFT obligations under the law, as well as regulatory directives.
+            It prevents any transaction that facilitates criminal activities.
           </p>
           <p className="text-white/90 text-base md:text-lg leading-relaxed">
-            Stealth Digital Solutions Inc. understands that it has a vital role
+            Stealthtech Solutions, Limited. understands that it has a vital role
             in preventing criminals from using our services to facilitate money
             laundering and terrorist financing. We are committed to detecting
             and avoiding money laundering and will cooperate fully with the
@@ -236,7 +236,7 @@ export default function AML_policy_page() {
             Our Commitment
           </h2>
           <p className="text-white/90 text-base md:text-lg leading-relaxed mb-4">
-            Stealth Digital Solutions Inc. is committed to maintaining the
+            Stealthtech Solutions, Limited. is committed to maintaining the
             highest standards of compliance with anti-money laundering and
             counter-terrorism financing regulations. We continuously monitor and
             update our policies and procedures to ensure they remain effective
@@ -252,7 +252,7 @@ export default function AML_policy_page() {
         {/* Footer */}
         <div className="text-center py-8 border-t border-orange-100/20">
           <p className="text-white/60 text-sm md:text-base">
-            &copy; {new Date().getFullYear()} Stealth Digital Solutions, Inc.
+            &copy; {new Date().getFullYear()} Stealthtech Solutions, Limited.
             All rights reserved.
           </p>
           <p className="text-white/60 text-sm mt-2">

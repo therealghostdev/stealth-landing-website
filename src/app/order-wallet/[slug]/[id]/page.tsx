@@ -56,6 +56,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
           price: parsed.price,
           complete: false,
           image: parsed.image,
+          anonymous: false, // key for anonymous buy
         },
       ];
       setPurchaseItems(restored);
@@ -185,6 +186,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
         walletTypeId: purchaseItems[0].id,
         price: itemValues.price,
         quantity: itemValues.amount,
+        isPickup: false,
       });
       return response;
     } catch (err) {
@@ -233,10 +235,10 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
           paymentsuccess && !error && !isPending && !isError
             ? "You're all done! check your mail for order details and delivery date"
             : error
-            ? "One or more input(s) invalid"
-            : isError && paymentsuccess
-            ? "Couldn't send your data, please contact support :("
-            : ""
+              ? "One or more input(s) invalid"
+              : isError && paymentsuccess
+                ? "Couldn't send your data, please contact support :("
+                : ""
         }
         dismiss={closeModal}
         errorState={error}
@@ -244,35 +246,70 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
         clearState={clearStateValues}
       >
         {!isPending && !error && !paymentsuccess && (
-          <div className="flex flex-col py-4 gap-y-4">
-            <div className="flex md:flex-row flex-col md:items-center gap-y-2 gap-x-2">
-              <h1 className="font-bold text-2xl">Account Name:</h1>
-              <h1 className="text-xl">Stealthtech Solutions Limited </h1>
-            </div>
-
-            <div className="flex md:flex-row flex-col md:items-center gap-y-2 gap-x-4">
-              <h1 className="font-bold text-2xl">Account Number:</h1>
-              <h1 className="text-xl">3002979312</h1>
-            </div>
-
-            <div className="flex md:flex-row flex-col md:items-center gap-y-2 gap-x-2">
-              <h1 className="font-bold text-2xl">Bank Name:</h1>
-              <h1 className="text-xl">Kuda Bank</h1>
-            </div>
-
-            <div className="flex md:flex-row flex-col md:items-center gap-y-2 gap-x-2">
-              <h1 className="font-bold text-2xl">Price:</h1>
-              <h1 className="text-xl">
+          <>
+            <div className="flex flex-col font-Satoshi font-bold justify-center items-center gap-y-2 my-4">
+              <h1 className="text-[#AAAAAA] text-[16px]">You are to pay:</h1>
+              <p className="text-white text-[28px]">
                 NGN{" "}
                 {itemValues.price?.toLocaleString("en", {
                   maximumFractionDigits: 2,
                 })}
-              </h1>
+              </p>
             </div>
-            <small className="!text-[#F7931A] text-xl">
-              Use <span className="!text-white !font-bold">{formValues.firstName}</span> as narration
-            </small>
-          </div>
+
+            <div className="flex justify-between my-2">
+              <div className="flex flex-col gap-y-2">
+                <span className="text-[#AAAAAA] text-[16px]">Bank Name</span>
+                <span className="text-white text-[20px]">Kuda Bank</span>
+              </div>
+              <div className="flex flex-col gap-y-2">
+                <span className="text-[#AAAAAA] text-[16px]">
+                  Account Number
+                </span>
+                <span className="text-white text-[20px]">3002979312</span>
+              </div>
+            </div>
+
+            <div className="!border !border-[#2B2B2B] !rounded-md font-Satoshi !bg-[#1F1F1F] flex flex-col gap-y-2 px-3 py-2 my-2">
+              <span className="text-[#AAAAAA] text-[14px]">
+                When making your bank transfer, kindly use this as narration:
+              </span>
+              <span className="text-white">{formValues.firstName}</span>
+            </div>
+          </>
+          // <div className="flex flex-col py-4 gap-y-4">
+          //   <div className="flex md:flex-row flex-col md:items-center gap-y-2 gap-x-2">
+          //     <h1 className="font-bold text-2xl">Account Name:</h1>
+          //     <h1 className="text-xl">Stealthtech Solutions Limited </h1>
+          //   </div>
+
+          //   <div className="flex md:flex-row flex-col md:items-center gap-y-2 gap-x-4">
+          //     <h1 className="font-bold text-2xl">Account Number:</h1>
+          //     <h1 className="text-xl">3002979312</h1>
+          //   </div>
+
+          //   <div className="flex md:flex-row flex-col md:items-center gap-y-2 gap-x-2">
+          //     <h1 className="font-bold text-2xl">Bank Name:</h1>
+          //     <h1 className="text-xl">Kuda Bank</h1>
+          //   </div>
+
+          //   <div className="flex md:flex-row flex-col md:items-center gap-y-2 gap-x-2">
+          //     <h1 className="font-bold text-2xl">Price:</h1>
+          //     <h1 className="text-xl">
+          //       NGN{" "}
+          //       {itemValues.price?.toLocaleString("en", {
+          //         maximumFractionDigits: 2,
+          //       })}
+          //     </h1>
+          //   </div>
+          //   <small className="!text-[#F7931A] text-xl">
+          //     Use{" "}
+          //     <span className="!text-white !font-bold">
+          //       {formValues.firstName}
+          //     </span>{" "}
+          //     as narration
+          //   </small>
+          // </div>
         )}
 
         {isPending && <div className="text-2xl font-bold">Loading...</div>}
@@ -282,17 +319,17 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
             {!error && paymentsuccess && !isPending && !isError
               ? "Congratulations! 🎉"
               : error
-              ? "Check input fields"
-              : isError && paymentsuccess
-              ? "Request failed 😓"
-              : ""}
+                ? "Check input fields"
+                : isError && paymentsuccess
+                  ? "Request failed 😓"
+                  : ""}
           </h1>
         </div>
 
         {!paymentsuccess && !error && (
           <button
             onClick={handlePaidState}
-            className="!bg-[#F7931A] !inline-flex !h-[35px] !cursor-pointer !items-center !justify-center !rounded-[4px] !px-[15px] !font-medium !leading-none !focus:outline-hidden"
+            className="font-Satoshi !bg-[#F7931A] !cursor-pointer !text-[#ffffff] !py-4 !px-2 !w-full !text-center !rounded-md"
           >
             I have Already Paid
           </button>
@@ -506,7 +543,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
                     <div className="w-full">
                       <button
                         onClick={handleSubmit}
-                        className="!bg-[#F7931A] !text-center !px-4 !py-6 !text-white-100 !rounded-md !w-full !my-8"
+                        className="!bg-[#F7931A] !text-center !cursor-pointer !px-4 !py-6 !text-white-100 !rounded-md !w-full !my-8"
                       >
                         Place Order NGN{" "}
                         {item.price.toLocaleString("en", {

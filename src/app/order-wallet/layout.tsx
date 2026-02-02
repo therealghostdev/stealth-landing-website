@@ -2,23 +2,19 @@ import Order_layout from "../components/client/order-wallet/order_layout";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Order Bitcoin Hardware Wallets | Secure Self Custody with Stealth Money",
+  title: "Buy Hardware Wallets in Nigeria | Ledger & Tangem – Stealth Money",
 
   description:
     "Order trusted Bitcoin hardware wallets through Stealth Money. Secure your Bitcoin with self custody using verified devices designed for long-term safety.",
 
   keywords: [
-    "Bitcoin hardware wallet",
-    "order hardware wallet",
-    "Bitcoin self custody wallet",
-    "cold storage Bitcoin",
-    "secure Bitcoin wallet",
-    "hardware wallet Nigeria",
-    "Bitcoin cold wallet",
-    "Stealth Money hardware wallet",
-    "Bitcoin wallet order",
-    "crypto hardware wallet",
+    "buy hardware wallet in nigeria",
+    "hardware wallets nigeria",
+    "buy bitcoin hardware wallet nigeria",
+    "ledger wallet nigeria",
+    "tangem wallet nigeria",
+    "bitcoin cold storage nigeria",
+    "crypto hardware wallet nigeria",
   ],
 
   authors: [{ name: "Stealth Money" }],

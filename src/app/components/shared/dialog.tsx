@@ -37,10 +37,10 @@ const DialogBox = ({
               : "max-w-[450px]"
           } translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-[#161616] p-[25px] shadow-[hsl(206_22%_7%/35%)_0px_10px_38px_-10px,hsl(206_22%_7%/20%)_0px_10px_20px_-15px] focus:outline-hidden`}
         >
-          <Dialog.Title className="m-0 text-lg font-bold">
+          <Dialog.Title className="m-0 text-lg font-bold text-[20px]">
             {header}
           </Dialog.Title>
-          <Dialog.Description className="mt-[10px] mb-5 text-[15px] leading-normal">
+          <Dialog.Description className="mt-[10px] mb-5 text-[15px] leading-normal text-[#D4D4D4]">
             {message}
           </Dialog.Description>
           {children}

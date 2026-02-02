@@ -4,9 +4,11 @@ export default function Privacy_policy_page() {
       {/* Header Section */}
       <div className="bg-orange-100 text-black py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-Satoshi">Data Policy</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-Satoshi">
+            Data Policy
+          </h1>
           <p className="text-lg md:text-xl opacity-80">
-            Stealth Digital Solutions, Inc. - Privacy & Data Protection Policy
+            Stealthtech Solutions, Limited. - Privacy & Data Protection Policy
           </p>
         </div>
       </div>
@@ -18,11 +20,9 @@ export default function Privacy_policy_page() {
             Introduction
           </h2>
           <p className="text-white/90 text-base md:text-lg leading-relaxed mb-4">
-            Stealth Digital Solutions, Inc. (the &quot;Company&quot;,
+            Stealthtech Solutions, Limited. (the &quot;Company&quot;,
             &quot;We&quot;, &quot;Us&quot;, &quot;Our&quot;) a private limited
-            liability company incorporated in Delaware, US is the data
-            controller for personal information collected in connection with
-            provision of Stealth Money Services.
+            liability company incorporated in the federal Republic of Nigeria.
           </p>
           <p className="text-white/90 text-base md:text-lg leading-relaxed">
             This Policy describes your privacy rights regarding our collection,
@@ -502,7 +502,7 @@ export default function Privacy_policy_page() {
         {/* Footer */}
         <div className="text-center py-8 border-t border-orange-100/20">
           <p className="text-white/60 text-sm md:text-base">
-            &copy; {new Date().getFullYear()} Stealth Digital Solutions, Inc.
+            &copy; {new Date().getFullYear()} Stealthtech Solutions, Limited.
             All rights reserved.
           </p>
           <p className="text-white/60 text-sm mt-2">
