@@ -277,39 +277,6 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
               <span className="text-white">{formValues.firstName}</span>
             </div>
           </>
-          // <div className="flex flex-col py-4 gap-y-4">
-          //   <div className="flex md:flex-row flex-col md:items-center gap-y-2 gap-x-2">
-          //     <h1 className="font-bold text-2xl">Account Name:</h1>
-          //     <h1 className="text-xl">Stealthtech Solutions Limited </h1>
-          //   </div>
-
-          //   <div className="flex md:flex-row flex-col md:items-center gap-y-2 gap-x-4">
-          //     <h1 className="font-bold text-2xl">Account Number:</h1>
-          //     <h1 className="text-xl">3002979312</h1>
-          //   </div>
-
-          //   <div className="flex md:flex-row flex-col md:items-center gap-y-2 gap-x-2">
-          //     <h1 className="font-bold text-2xl">Bank Name:</h1>
-          //     <h1 className="text-xl">Kuda Bank</h1>
-          //   </div>
-
-          //   <div className="flex md:flex-row flex-col md:items-center gap-y-2 gap-x-2">
-          //     <h1 className="font-bold text-2xl">Price:</h1>
-          //     <h1 className="text-xl">
-          //       NGN{" "}
-          //       {itemValues.price?.toLocaleString("en", {
-          //         maximumFractionDigits: 2,
-          //       })}
-          //     </h1>
-          //   </div>
-          //   <small className="!text-[#F7931A] text-xl">
-          //     Use{" "}
-          //     <span className="!text-white !font-bold">
-          //       {formValues.firstName}
-          //     </span>{" "}
-          //     as narration
-          //   </small>
-          // </div>
         )}
 
         {isPending && <div className="text-2xl font-bold">Loading...</div>}
