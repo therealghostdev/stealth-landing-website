@@ -48,6 +48,7 @@ export interface Item {
   amount: number;
   complete: boolean;
   image: string;
+  anonymous: boolean;
 }
 
 export interface formValueTypes {
